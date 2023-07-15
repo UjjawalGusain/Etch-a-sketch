@@ -2,8 +2,6 @@ const gridContainer = document.querySelector('.grid-container');
 const button = document.querySelector(".button");
 const submitButton = document.querySelector('.submit-button');
 var input = document.querySelector("input");
-// var display = document.querySelector(".display");
-// var noDisplay = document.querySelector(".no-display");
 var n = 16;
 var result;
 var randomQuote = document.querySelector(".random-quote");
@@ -75,7 +73,6 @@ function getPixelFromUser(){
     console.log(n);
     gridContainer.innerHTML = "";
     generateGrids();
-
 }
 
 function getRandomQuote(){
@@ -83,5 +80,4 @@ function getRandomQuote(){
         console.log(result);
         randomQuote.innerText = result.content;
     });
-
 }

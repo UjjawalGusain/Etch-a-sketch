@@ -101,13 +101,11 @@ section{
     border-bottom-left-radius: var(--border-botton-left-radius);
     border-bottom-right-radius: var(--border-botton-right-radius);
     z-index: -1;
-    /* transition: bottom, 100ms ease-in; */
     --background-color:  #d9d9d9;
     transition: bottom, top, left, right, 200ms ease-in;
 }
 
 .button:hover::before, .button:focus::before{
-    /* bottom: calc(var(--border-size)*-15); */
     top: calc(var(--border-size)*-2);
     bottom: calc(var(--border-size)*-2);
     right: calc(var(--border-size)*-2);
@@ -215,6 +213,14 @@ section{
     margin-left: 10vh;
     padding: 5vh;
     align-self:center;
+    transition: all 100ms;
+    border: black 3px solid;
+}
+
+
+.sketch-section-link:hover{
+    transform: scale(1.25);
+    border: black 10px solid;
 }
 
 .random-quote-container{
@@ -289,10 +295,3 @@ section{
 .color-change{
     background-color: black;
 }
-
-/* colour pallete for sketch-section:
-1. d9d9d9 background
-2. f7567c bright pink
-3. 223843 gunmetal
-4. 279af1 blue
-5. 498c8a cyan */

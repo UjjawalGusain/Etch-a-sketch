@@ -1,0 +1,298 @@
+@font-face {
+    font-family: greetingFont;
+    src: url(fonts/Carly.ttf);
+}
+
+@font-face {
+    font-family: buttonFont;
+    src: url(fonts/Charleville\ Free.otf);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+section{
+    height: 120vh;
+}
+
+
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.greetings{
+    display: flex;
+    font-size: 100px;
+    text-align: center;
+    font-family: greetingFont;
+    padding: 18px;
+    background-color: #4484ce;
+}
+
+.button{
+    text-align: center;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    margin: 3rem;
+    align-self: center;
+    border: solid #f19f4d;
+    background-color: var(--background-color);
+    cursor: pointer;
+    padding: 0.5em 1em;
+    --background-color: #f19f4d;
+    --border-size: 5px;
+    --border-top-left-radius: 100px;
+    --border-top-right-radius: 100px;
+    --border-bottom-right-radius: 100px;
+    --border-bottom-right-radius: 100px;
+    position: relative;
+}
+
+.button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: solid var(--background-color) var(--border-size);
+    border-top-left-radius: var(--border-top-left-radius);
+    border-top-right-radius: var(--border-top-right-radius);
+    border-bottom-left-radius: var(--border-botton-left-radius);
+    border-bottom-right-radius: var(--border-botton-right-radius);
+    z-index: -1;
+    transition: bottom, 100ms ease-in; 
+    --background-color: #d9d9d9;
+    transition: bottom, top, left, right, 200ms ease-in; 
+    
+}
+
+.button:hover:active::before{
+    bottom: calc(var(--border-size)*-30);
+    transition: bottom, 100ms ease-in;
+    right: calc(var(--border-size)*-2);
+    left: calc(var(--border-size)*-2);
+    top: calc(var(--border-size)*-2);
+    background-color: #d9d9d9;
+}
+
+.button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: solid var(--background-color) var(--border-size);
+    border-top-left-radius: var(--border-top-left-radius);
+    border-top-right-radius: var(--border-top-right-radius);
+    border-bottom-left-radius: var(--border-botton-left-radius);
+    border-bottom-right-radius: var(--border-botton-right-radius);
+    z-index: -1;
+    /* transition: bottom, 100ms ease-in; */
+    --background-color:  #d9d9d9;
+    transition: bottom, top, left, right, 200ms ease-in;
+}
+
+.button:hover::before, .button:focus::before{
+    /* bottom: calc(var(--border-size)*-15); */
+    top: calc(var(--border-size)*-2);
+    bottom: calc(var(--border-size)*-2);
+    right: calc(var(--border-size)*-2);
+    left: calc(var(--border-size)*-2);
+}
+.click-me{
+    font-size: 150px;
+    font-family: buttonFont;
+}
+
+.button-subscript{
+    font-family: buttonFont;
+    font-size: 25px;
+}
+
+.display{
+    display: block;
+    margin: auto;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#intro-section div.display{
+    font-size: small;
+    position: absolute;
+}
+
+#number{
+    width: 18em;
+}
+
+:root{
+    --border-submit: solid black 3px;
+}
+
+.submit-button{
+    border: var(--border-submit);
+    font-size: xx-large;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    left: 85rem;
+    bottom: 40px;
+    background-color: #d9d9d9;
+    max-width: 7rem;
+    justify-content: center;
+    display: none;
+    transition: all ease-in-out 100ms;
+}
+
+.submit-button-display{
+    display: flex;
+}
+
+.submit-button:hover{
+    border: var(--border-submit);
+    transform: scale(1.1);
+    --border-submit: solid rgb(31, 25, 25) 5px;
+}
+
+#secret-message{
+    position: absolute;
+    font-size: 8px;
+    left: 114rem;
+    bottom: 3rem;
+}
+
+.no-display{
+    display: none;
+}
+
+
+
+#process-section{
+    background-color: #f7567c;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 5vh;
+}
+
+
+.sketch-heading-container{
+    align-self: self-start;
+    font-family: buttonFont;
+    font-size: 40px;
+    border: #d8cccf solid 5px;
+    padding: 5vh;
+}
+
+.sketch-heading{
+    font-family: greetingFont;
+    font-size: 100px;
+    border: #d8cccf solid 5px;
+    padding: 3vh;
+}
+
+.sketch-section-link{
+    text-decoration: none;
+    color: black;
+    font-size: 80px;
+    background-color: white;
+    text-align: center;
+    border-radius: 130px;
+    margin-left: 10vh;
+    padding: 5vh;
+    align-self:center;
+}
+
+.random-quote-container{
+    background-color: white;
+    font: 1em sans-serif;
+    padding: 4vh;
+    border-radius: 40px;
+    margin-left: 15vh;
+    margin-top: 35vh;
+}
+
+.random-quote-heading{
+    font-size: 5rem;
+    font-family: buttonFont;
+}
+
+.random-quote{
+    color: black;
+    font-size: xx-large;
+    font-family: buttonFont;
+}
+
+
+
+#sketch-section{
+    background-color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 30px;
+    height: 200vh;
+}
+
+.grid-container-heading{
+    font-family: greetingFont;
+    font-size: 50px;
+    border: black solid 5px;
+    background-color: white;
+    border-radius: 50px;
+    padding: 100px;
+
+}
+
+.grid-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    border: white 10px;
+    border-style:ridge;
+    min-width: 8vh;
+    max-width: 200vh;
+    max-height: 200vh;
+    min-height: 8vh;
+    background-color: white;
+}
+
+.row-grid-box{
+    display: flex;
+    flex-direction: column;
+    background-color: #279af1;
+}
+
+.column-grid-box{
+    border: 0px solid #279af1;
+    background-color: #279af1;
+    padding: 6px;
+}
+
+
+.color-change{
+    background-color: black;
+}
+
+/* colour pallete for sketch-section:
+1. d9d9d9 background
+2. f7567c bright pink
+3. 223843 gunmetal
+4. 279af1 blue
+5. 498c8a cyan */

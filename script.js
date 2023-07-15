@@ -6,7 +6,7 @@ var n = 16;
 var result;
 var randomQuote = document.querySelector(".random-quote");
 button.addEventListener('click', promptMenuAppear);
-
+var clearAllButton = document.querySelector("#clear-all");
 getRandomQuote();
 submitButton.addEventListener('click', getPixelFromUser);
 
@@ -63,6 +63,7 @@ gridContainer.addEventListener('dblclick', () => {
 
 });
 
+clearAllButton.addEventListener('click', destroyGrids);
 
 function getPixelFromUser(){
     n = parseInt(document.querySelector('#number').value);
@@ -71,6 +72,10 @@ function getPixelFromUser(){
     if(n == 69)
         window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
     console.log(n);
+    destroyGrids();
+}
+
+function destroyGrids(){
     gridContainer.innerHTML = "";
     generateGrids();
 }
